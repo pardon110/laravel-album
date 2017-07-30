@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/','StaticPagesController@home')->name('home');
+Route::resourse('albums','AlbumsController');
+Route::resourse('photos','PhotosController');
