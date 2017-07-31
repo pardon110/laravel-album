@@ -34,7 +34,9 @@ class AlbumsController extends Controller
     public function show($id)
     {
     	$album = Album::findOrFail($id);
-    	return  view('albums.show',compact('album'));
+        $photos = $album->photos()->orderBy('created_at','desc')->paginate(20);
+
+    	return  view('albums.show',compact('album','photos'));
     }
 
 

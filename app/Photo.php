@@ -8,4 +8,9 @@ class Photo extends Model
 {
     //
     protected $fillable = ['album_id','name','intro','src'];
+
+    public function photos()
+    {
+    	return $this->hasMany('App\Photo');
+    }
 }
