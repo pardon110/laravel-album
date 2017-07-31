@@ -4,9 +4,10 @@
 
 @section('content')
 
+<!-- error -->
 @include('shared.errors')
 
-
+<!-- create album -->
 <button type="button" class="btn btn-primary" style="margin-bottom:10px" data-toggle="modal" data-target="#createAlbum">
   Create Album
 </button>
@@ -44,9 +45,10 @@
   </div>
 </div>
 
+<!-- ablum show  -->
 <div class="row">
 	@each('shared.album', $albums, 'album')
 </div>
 
 
-@endsections
+@endsection
